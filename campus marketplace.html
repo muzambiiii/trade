@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CampusTrade India - Marketplace & Skill Swap</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <h1>🎓 CampusTrade</h1>
+            <div id="nav-actions">
+                <p class="tagline">Exclusive for Verified College Students</p>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Authentication Section -->
+    <section id="auth-section" class="container auth-container">
+        <h2>Join Your Campus Network</h2>
+        <p>Enter your college email (.ac.in or .edu.in) to access the marketplace.</p>
+        
+        <form id="login-form">
+            <input type="email" id="email-input" placeholder="e.g. student@college.ac.in" required>
+            <p id="email-error" class="error-text hidden">Please use a valid college email ending in .ac.in or .edu.in</p>
+            <button type="submit" class="btn-primary">Verify & Enter</button>
+        </form>
+    </section>
+
+    <!-- Dashboard Section (Hidden until login) -->
+    <section id="dashboard-section" class="container hidden">
+        
+        <!-- Tab Navigation -->
+        <div class="tabs">
+            <button id="tab-market" class="tab active" onclick="switchTab('marketplace')">🛒 Marketplace (Textbooks)</button>
+            <button id="tab-skills" class="tab" onclick="switchTab('skills')">🤝 Skill Swap</button>
+        </div>
+
+        <!-- Marketplace Grid -->
+        <div id="marketplace-view" class="grid-view">
+            <!-- BCA Book -->
+            <div class="card">
+                <div class="card-img bca-color">📚 BCA</div>
+                <div class="card-content">
+                    <span class="badge badge-sell">Selling</span>
+                    <h3>Object-Oriented Programming C++</h3>
+                    <p>Author: E. Balagurusamy. Good condition, 7th Edition.</p>
+                    <div class="card-footer">
+                        <span class="price">₹250</span>
+                        <button class="btn-secondary">Contact</button>
+                    </div>
+                </div>
+            </div>
+            
+
+            <!-- BCOM Book -->
+            <div class="card">
+                <div class="card-img bcom-color">📘 BCOM</div>
+                <div class="card-content">
+                    <span class="badge badge-sell">Selling</span>
+                    <h3>Financial Accounting</h3>
+                    <p>Authors: T.S. Reddy & A. Murthy. Used for 1 semester.</p>
+                    <div class="card-footer">
+                        <span class="price">₹300</span>
+                        <button class="btn-secondary">Contact</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- BBA Book -->
+            <div class="card">
+                <div class="card-img bba-color">📙 BBA</div>
+                <div class="card-content">
+                    <span class="badge badge-sell">Selling</span>
+                    <h3>Principles of Management</h3>
+                    <p>Author: Philip Kotler. Brand new condition.</p>
+                    <div class="card-footer">
+                        <span class="price">₹350</span>
+                        <button class="btn-secondary">Contact</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Skill Swap Grid (Hidden by default) -->
+        <div id="skills-view" class="grid-view hidden">
+            <!-- Skill Swap 1 -->
+            <div class="card skill-card">
+                <div class="card-content">
+                    <span class="badge badge-skill">Skill Swap</span>
+                    <h3>Offering: Tally Prime / GST Filing</h3>
+                    <p class="author">BCOM Student</p>
+                    <p>I can help you with accounting and Tally. I need someone to teach me basic HTML/CSS for a personal project.</p>
+                    <div class="skill-needs">
+                        <strong>Needs:</strong> Web Development (BCA)
+                    </div>
+                    <button class="btn-primary mt-2">Message</button>
+                </div>
+            </div>
+
+            <!-- Skill Swap 2 -->
+            <div class="card skill-card">
+                <div class="card-content">
+                    <span class="badge badge-skill">Skill Swap</span>
+                    <h3>Offering: Pitch Deck & Presentation Skills</h3>
+                    <p class="author">BBA Student</p>
+                    <p>I can help you build a solid business pitch deck. I need help debugging a Python script for my startup idea.</p>
+                    <div class="skill-needs">
+                        <strong>Needs:</strong> Python Scripting (BCA)
+                    </div>
+                    <button class="btn-primary mt-2">Message</button>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+
+    <script src="script.js"></script>
+</body>
+</html>
